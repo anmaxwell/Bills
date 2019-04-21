@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+   <body>
+   
+      <h1>Hello {{ name }}!</h1>
+      
+   </body>
+	<form>
+		Mortgage:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		Insurance:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		Car:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		Petrol:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>		
+		GasElec:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		Water:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		TVLicense:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		CouncilTax:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		MobilePhone:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		Internet:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		Food:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		EatingOut:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		HouseholdGoods:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>
+		Toiletries:<br>
+		<input name="numeric" type="text" size="8" maxlength="4" /><br>				
+
+		<input type="button" value="Calculate" onclick="calculate(this.form);" />
+		<input name="total" type="text" size="8" readonly="readonly" />
+	</form>
+
+	<script type="text/javascript">
+		function calculate(form){
+		var sum = 0;
+		for(var i = 0; i < form.numeric.length; i++)sum += Number(form.numeric[i].value);
+		form.total.value = sum;
+		}
+	</script>
+</html>
